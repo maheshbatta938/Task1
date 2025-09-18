@@ -1,226 +1,120 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Bootstrap Remix — Home</title>
-
-  <!-- Bootstrap 5 CSS (CDN) -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-
-  <!-- Bootstrap Icons -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.4/font/bootstrap-icons.css" rel="stylesheet">
-
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 </head>
 <body>
 
-  <!-- NAVBAR -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom shadow-sm">
-    <div class="container">
-      <a class="navbar-brand fw-bold" href="#">RemixUI</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
-        aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navMenu">
-        <ul class="navbar-nav ms-auto align-items-lg-center">
-          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="about.html">About / Services</a></li>
-          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-          <li class="nav-item ms-2">
-            <a class="btn btn-primary btn-sm" href="#getstarted">Get Started</a>
-          </li>
-        </ul>
-      </div>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="index.html">Bootstrap Remix</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
     </div>
-  </nav>
+  </div>
+</nav>
 
-  <!-- HERO / CAROUSEL -->
-  <header class="py-5">
-    <div class="container">
-      <div id="heroCarousel" class="carousel slide rounded-3 overflow-hidden shadow-sm" data-bs-ride="carousel">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <div class="row g-0 align-items-center">
-              <div class="col-md-6 p-4 p-md-5">
-                <h1 class="display-6 fw-bold">Build Beautiful Pages with Bootstrap 5</h1>
-                <p class="lead text-muted">Remix components — don't copy blindly. Learn composition, spacing, and polish.</p>
-                <p>
-                  <a class="btn btn-primary btn-lg me-2" href="#features">Explore</a>
-                  <a class="btn btn-outline-secondary btn-lg" href="about.html">Learn More</a>
-                </p>
-              </div>
-              <div class="col-md-6 d-none d-md-block">
-                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=1e8d8bf8c5a3f4f81b2c39a6f2761d41"
-                  class="img-fluid rounded-end" alt="hero image">
-              </div>
-            </div>
-          </div>
+<!-- Hero -->
+<section class="hero">
+  <div class="container">
+    <h1>Build with Bootstrap 5</h1>
+    <p class="mt-3">Modern, responsive, and stylish websites with ease.</p>
+    <a href="about.html" class="btn btn-light btn-lg mt-4">Learn More</a>
+  </div>
+</section>
 
-          <div class="carousel-item">
-            <div class="row g-0 align-items-center">
-              <div class="col-md-6 p-4 p-md-5">
-                <h2 class="fw-bold">Components that Work Together</h2>
-                <p class="text-muted">Navbars, cards, hero sections, forms and modals — thoughtfully combined.</p>
-                <p><a class="btn btn-primary btn-lg" href="#gallery">See examples</a></p>
-              </div>
-              <div class="col-md-6 d-none d-md-block">
-                <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=6c658ccb0a556c2f4e729b0c7e8d4f56"
-                  class="img-fluid rounded-end" alt="work together">
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div>
-    </div>
-  </header>
-
-  <!-- FEATURES -->
-  <section id="features" class="py-5 bg-light">
-    <div class="container">
-      <div class="text-center mb-4">
-        <h3 class="fw-bold">What you'll remix</h3>
-        <p class="text-muted mb-0">Hand-picked Bootstrap patterns combined into clean pages.</p>
-      </div>
-
-      <div class="row g-4 mt-3">
-        <div class="col-md-4">
-          <div class="card h-100 border-0 shadow-sm">
-            <div class="card-body">
-              <div class="mb-3 display-6 text-primary"><i class="bi bi-window-stack"></i></div>
-              <h5 class="card-title">Responsive Navbars</h5>
-              <p class="card-text text-muted">Adaptive navigation with clear CTAs for desktop and mobile.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-4">
-          <div class="card h-100 border-0 shadow-sm">
-            <div class="card-body">
-              <div class="mb-3 display-6 text-primary"><i class="bi bi-card-text"></i></div>
-              <h5 class="card-title">Content Cards</h5>
-              <p class="card-text text-muted">Organize services and features into digestible cards.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-4">
-          <div class="card h-100 border-0 shadow-sm">
-            <div class="card-body">
-              <div class="mb-3 display-6 text-primary"><i class="bi bi-ui-checks-grid"></i></div>
-              <h5 class="card-title">Forms & Modals</h5>
-              <p class="card-text text-muted">Lightweight UI elements for user input and interactions.</p>
-            </div>
-          </div>
+<!-- Features -->
+<section class="py-5">
+  <div class="container text-center">
+    <h2 class="fw-bold mb-4">Our Features</h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card p-3">
+          <i class="bi bi-lightning-charge text-primary display-5"></i>
+          <h5 class="mt-3">Fast</h5>
+          <p>Optimized for performance and speed.</p>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- GALLERY / CARDS -->
-  <section id="gallery" class="py-5">
-    <div class="container">
-      <div class="d-flex justify-content-between align-items-center mb-3">
-        <h4 class="fw-bold mb-0">Featured Projects</h4>
-        <button class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#quickModal">Preview modal</button>
-      </div>
-
-      <div class="row g-4">
-        <div class="col-md-4">
-          <div class="card h-100 shadow-sm">
-            <img src="https://images.unsplash.com/photo-1508921912186-1d1a45ebb3c1?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=8b0d8f5d6a0f1c1b1b7d9f4b7c0c675e" class="card-img-top" alt="project 1">
-            <div class="card-body">
-              <h5 class="card-title">Modern Dashboard</h5>
-              <p class="card-text text-muted small">Clean metrics, responsive layout and components that scale.</p>
-              <a href="#" class="stretched-link">View case</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-4">
-          <div class="card h-100 shadow-sm">
-            <img src="https://images.unsplash.com/photo-1526378726038-38a6f9c66f2a?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=60f5a6bdd9741b4b0a0d7ad3f9a3b3a7" class="card-img-top" alt="project 2">
-            <div class="card-body">
-              <h5 class="card-title">Marketing Site</h5>
-              <p class="card-text text-muted small">Hero sections and feature blocks tuned for conversions.</p>
-              <a href="#" class="stretched-link">View case</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-4">
-          <div class="card h-100 shadow-sm">
-            <img src="https://images.unsplash.com/photo-1487014679447-9f8336841d58?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=3f8d4d2d3b3d4f9e3f5e7b6d7f8c9a1c" class="card-img-top" alt="project 3">
-            <div class="card-body">
-              <h5 class="card-title">App Landing</h5>
-              <p class="card-text text-muted small">Showcase features with clean cards and CTA alignment.</p>
-              <a href="#" class="stretched-link">View case</a>
-            </div>
-          </div>
+      <div class="col-md-4">
+        <div class="card p-3">
+          <i class="bi bi-phone text-success display-5"></i>
+          <h5 class="mt-3">Responsive</h5>
+          <p>Looks great on desktop, tablet, and mobile.</p>
         </div>
       </div>
-
-    </div>
-  </section>
-
-  <!-- QUICK MODAL -->
-  <div class="modal fade" id="quickModal" tabindex="-1" aria-labelledby="quickModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="quickModalLabel">Quick Preview</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          This is a lightweight modal to preview key information without leaving the page.
-        </div>
-        <div class="modal-footer">
-          <a href="about.html" class="btn btn-primary">Go to About</a>
-          <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
+      <div class="col-md-4">
+        <div class="card p-3">
+          <i class="bi bi-palette text-danger display-5"></i>
+          <h5 class="mt-3">Customizable</h5>
+          <p>Easy to adapt and style for your brand.</p>
         </div>
       </div>
     </div>
   </div>
+</section>
 
-  <!-- CTA -->
-  <section id="getstarted" class="py-5 bg-primary text-white">
-    <div class="container text-center">
-      <h4 class="fw-bold">Start remixing Bootstrap components</h4>
-      <p class="mb-3">Clone the repo, experiment, and document your progress — then deploy!</p>
-      <a href="contact.html" class="btn btn-light btn-lg">Contact Mentor</a>
+<!-- Testimonials -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <h2 class="fw-bold text-center mb-4">What People Say</h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="testimonial">
+          <p>"Bootstrap Remix made my project stand out!"</p>
+          <h6 class="mt-3 mb-0">– Alex</h6>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="testimonial">
+          <p>"The UI looks clean and professional. Love it!"</p>
+          <h6 class="mt-3 mb-0">– Priya</h6>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="testimonial">
+          <p>"Easy to build, responsive, and polished."</p>
+          <h6 class="mt-3 mb-0">– John</h6>
+        </div>
+      </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- FOOTER -->
-  <footer class="py-4 bg-white border-top">
-    <div class="container d-md-flex justify-content-between align-items-center">
-      <div class="mb-2 mb-md-0 text-muted small">© <span id="year"></span> RemixUI. All rights reserved.</div>
-      <ul class="list-unstyled d-flex gap-3 mb-0">
-        <li><a class="text-muted small" href="#">Privacy</a></li>
-        <li><a class="text-muted small" href="#">Terms</a></li>
-        <li><a class="text-muted small" href="#">Support</a></li>
-      </ul>
+<!-- Call to Action -->
+<section class="py-5 text-center text-white" style="background: #0d6efd;">
+  <div class="container">
+    <h2 class="fw-bold">Ready to Start?</h2>
+    <p>Explore our services and build your next project today.</p>
+    <a href="contact.html" class="btn btn-light btn-lg">Get in Touch</a>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer text-center">
+  <div class="container">
+    <p>© 2025 Bootstrap Remix | Built with ❤️ using Bootstrap 5</p>
+    <div>
+      <a href="#"><i class="bi bi-facebook me-3"></i></a>
+      <a href="#"><i class="bi bi-twitter me-3"></i></a>
+      <a href="#"><i class="bi bi-linkedin"></i></a>
     </div>
-  </footer>
+  </div>
+</footer>
 
-  <!-- Bootstrap JS Bundle with Popper (CDN) -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-  <script>
-    // small helpers
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
