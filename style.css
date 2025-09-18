@@ -1,0 +1,20 @@
+/* Hero section */
+.hero-section {
+  background: linear-gradient(to right, #0d6efd, #4dabf7);
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+/* Card hover */
+.card:hover {
+  transform: translateY(-5px);
+  transition: 0.3s;
+}
+
+/* Footer */
+.site-footer {
+  background: #f8f9fa;
+}
